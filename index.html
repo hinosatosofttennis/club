@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>日の里ソフトテニス倶楽部 公式サイト</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=MeiryoUI:wght@400;700&family=MeiryoUI:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=メイリオ:wght@400;700&family=メイリオ:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* 日本語はMeiryoUI、英数字はMeiryoUIを使用 */
+        /* 日本語はメイリオ、英数字はメイリオを使用 */
         body {
-            font-family: 'MeiryoUI', 'MeiryoUI', sans-serif;
+            font-family: 'メイリオ', 'メイリオ', sans-serif;
         }
         /* スムーズスクロール */
         html {
@@ -152,9 +152,10 @@
                         2. 「リンクを知っている全員が閲覧可」の設定で共有リンクを取得します。
                         3. 下の a タグの href="#" に、取得した共有リンクを貼り付けます。
                     -->
-                    <a href="#" class="inline-block bg-green-500 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-600 transition duration-300">
+                    <a href="https://drive.google.com/uc?export=download&id=ファイルID" download class="inline-block bg-green-500 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-600 transition duration-300">
                         入会申込書（Wordファイル）をダウンロード
                     </a>
+                    
                     <p class="mt-8">
                         <strong>提出先メールアドレス:</strong><br>
                         <a href="mailto:hinosatosofttennis@gmail.com" class="text-blue-600 text-lg">hinosatosofttennis@gmail.com</a>
@@ -164,6 +165,15 @@
         </section>
 
         <!-- スケジュール -->
+        <section id="schedule" class="py-12 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center mb-8">スケジュール</h2>
+                <div class="max-w-4xl mx-auto bg-gray-100 p-4 rounded-lg shadow-inner">
+                    <iframe src="https://calendar.google.com/calendar/embed?src=カレンダーID&ctz=Asia%2FTokyo"
+                            style="border:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+                </div>
+            </div>
+        </section>
         <section id="schedule" class="py-12 bg-white">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-3xl font-bold text-center mb-8">スケジュール</h2>
@@ -225,8 +235,10 @@
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     <!-- メンバーカード -->
                     <div class="text-center">
-                        <img src="https://placehold.co/200x200/e0e7ff/4338ca?text=Member+A" alt="メンバーA" class="w-32 h-32 mx-auto rounded-full shadow-lg">
-                        <h4 class="mt-4 text-lg font-bold">だい age43</h4>
+                        <a href="members/dai.html">
+                            <img src="https://placehold.co/200x200/e0e7ff/4338ca?text=だい" alt="だい" class="w-32 h-32 mx-auto rounded-full shadow-lg">
+                            <h4 class="mt-4 text-lg font-bold">だい age43</h4>
+                        </a>
                         <p class="text-gray-600">代表 / 右打ち</p>
                         <p class="text-sm mt-1">"楽しく、真剣に！"</p>
                     </div>
