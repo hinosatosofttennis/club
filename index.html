@@ -195,6 +195,9 @@
                             <p class="text-gray-700">創設メンバー8名で設立会議を実施。クラブの未来について熱く語り合いました！</p>
                         </div>
                     </div>
+
+                    
+                    <div id="past-history" class="hidden space-y-4">
                     <!-- 活動報告カード -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                         <img src="https://placehold.co/400x250/6ee7b7/ffffff?text=Activity+2" alt="活動写真2" class="w-full h-48 object-cover">
@@ -214,6 +217,13 @@
                         </div>
                     </div>
                 </div>
+
+                    <div class="text-center mt-6">
+                <button id="toggle-history-button" class="text-blue-600 hover:underline">
+                    過去の活動カードを見る
+                </button>
+                    </div>
+                </div>         
             </div>
         </section>
 
@@ -275,7 +285,7 @@
                 <h2 class="text-3xl font-bold text-center mb-4">練習日申し込み</h2>
                  <div class="max-w-2xl mx-auto bg-white p-4 rounded-lg shadow-lg text-center">
                     <h3 class="text-2xl font-bold text-center mb-8">定期練習会　参加登録</h3>
-                        <p class="text-gray-500">テニスコート予約の都合上、定期練習会について、日程毎に参加登録をお願いします。</p>
+                        <p class="text-gray-500">テニスコート予約の都合上、<br>定期練習会について、日程毎に参加登録をお願いします。</p>
                       <div class="text-left space-y-4 mb-8">
                         <p>：以下ボタンをクリックし、必要項目を入力のうえ、送信してください。</p></div>
                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScn5kW8LP9XAtLEe427W89-8calS3lJ_O9BxVOkR8-YkL_Nyw/viewform?embedded=true" download class="inline-block bg-green-500 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-600 transition duration-300">
@@ -292,7 +302,7 @@
 <br>
                    <div class="max-w-2xl mx-auto bg-white p-4 rounded-lg shadow-lg text-center">   
                         <h3 class="text-2xl font-bold text-center mb-4">追加練習　日程希望</h3>
-                        <p class="text-gray-500">定期練習会に加えて、追加希望の練習日程を申し込めます。</p>
+                        <p class="text-gray-500">定期練習会に加えて、<br>追加希望の練習日程を申し込めます。</p>
                       <div class="text-left space-y-4 mb-4">
                         <p>：以下ボタンをクリックし、必要項目を入力のうえ、送信してください。</p></div>
                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfNZBXXxgkknc6vTmvnEpCwphjehBA89lgtUqstDwRbe1wlsw/viewform?embedded=true" download class="inline-block bg-green-500 text-white font-bold py-3 px-4 rounded-lg text-lg hover:bg-green-600 transition duration-300">
@@ -368,6 +378,21 @@
   　      // ボタンのテキストを状態に応じて変更する
 　        if (pastNews.classList.contains('hidden')) {
 　            toggleNewsButton.textContent = '過去のお知らせを見る';
+　        } else {
+ 　           toggleNewsButton.textContent = '閉じる';
+  　      }
+   　　 });
+        // 活動カードの表示切り替え機能
+   　　　 const toggleNewsButton = document.getElementById('toggle-news-button');
+　　　    const pastNews = document.getElementById('past-news');
+
+　　　    toggleNewsButton.addEventListener('click', () => {
+ 　       // 'hidden'クラスの付け外しで表示・非表示を切り替える
+        pastNews.classList.toggle('hidden');
+
+  　      // ボタンのテキストを状態に応じて変更する
+　        if (pastNews.classList.contains('hidden')) {
+　            toggleNewsButton.textContent = '過去の活動カードを見る';
 　        } else {
  　           toggleNewsButton.textContent = '閉じる';
   　      }
