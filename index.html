@@ -383,18 +383,18 @@
   　      }
    　　 });
         // 活動カードの表示切り替え機能
-   　　　 const toggleNewsButton = document.getElementById('toggle-news-button');
-　　　    const pastNews = document.getElementById('past-news');
+   　　　 const toggleHistoryButton = document.getElementById('toggle-history-button');
+　　　    const pastHistory = document.getElementById('past-history');
 
-　　　    toggleNewsButton.addEventListener('click', () => {
+　　　    toggleHistoryButton.addEventListener('click', () => {
  　       // 'hidden'クラスの付け外しで表示・非表示を切り替える
-        pastNews.classList.toggle('hidden');
+        pastHistory.classList.toggle('hidden');
 
   　      // ボタンのテキストを状態に応じて変更する
-　        if (pastNews.classList.contains('hidden')) {
-　            toggleNewsButton.textContent = '過去の活動カードを見る';
+　        if (pastHistory.classList.contains('hidden')) {
+　            toggleHistoryButton.textContent = '過去の活動カードを見る';
 　        } else {
- 　           toggleNewsButton.textContent = '閉じる';
+ 　           toggleHistoryButton.textContent = '閉じる';
   　      }
    　　 });
 
